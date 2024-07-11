@@ -87,7 +87,7 @@ const Sidebar = () => {
 
   const handleLogout = async () => {
     await signOut({ redirect: false });
-    router.push("/loginDashboard");
+    router.replace("/loginDashboard");
   };
 
   const handleMenuClick = (e) => {

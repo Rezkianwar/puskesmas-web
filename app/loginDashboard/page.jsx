@@ -37,13 +37,16 @@ const LoginDashboard = () => {
       if (res.error) {
         message.error("Invalid username or password");
       } else {
-        // Mendapatkan sesi pengguna untuk memastikan `isAdmin`
         const session = await fetch("/api/auth/session").then((res) =>
           res.json()
         );
         console.log("Session:", session);
 
-        if (session.user && typeof session.user.isAdmin !== "undefined") {
+        if (
+          session &&
+          session.user &&
+          typeof session.user.isAdmin !== "undefined"
+        ) {
           const isAdmin = session.user.isAdmin;
           console.log("isAdmin:", isAdmin);
 
@@ -51,7 +54,7 @@ const LoginDashboard = () => {
             searchParams.get("redirect_url") ||
             (isAdmin ? "/dashboard" : "/dashboardPegawai");
           message.success("Login successful");
-          router.push(redirectUrl);
+          router.replace(redirectUrl);
         } else {
           message.error("Failed to retrieve user session data");
         }
