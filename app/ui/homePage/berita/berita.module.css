@@ -1,0 +1,21 @@
+.container{
+  padding: 20px;
+}
+
+.container h1{
+  font-size: 2em;
+  margin-bottom: 20px;
+  background-color: #456049; 
+  padding: 20px;
+  color: var(--text);
+  border-radius: 10px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.grid{
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  gap: 20px
+}

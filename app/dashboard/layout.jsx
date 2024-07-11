@@ -1,18 +1,21 @@
 import Navbar from "../ui/dashboard/navbar/navbar";
 import Sidebar from "../ui/dashboard/sidebar/sidebar";
+import styles from "../ui/dashboard/dashboard.module.css";
+import Footer from "../ui/dashboard/footer/footer";
 
-const layout = ({children}) => {
-    return (
-    <div>
-        <div>
-            <Sidebar/>
-        </div>
-        <div>
-            <Navbar/>
-            {children}
-        </div>
+const layout = ({ children }) => {
+  return (
+    <div className={styles.container} style={{ backgroundColor: "var(--bg)" }}>
+      <div className={styles.menu}>
+        <Sidebar />
+      </div>
+      <div className={styles.content}>
+        <Navbar />
+        {children}
+        <Footer />
+      </div>
     </div>
-    )
-}
+  );
+};
 
 export default layout;

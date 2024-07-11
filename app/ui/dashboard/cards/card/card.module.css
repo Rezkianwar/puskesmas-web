@@ -1,0 +1,58 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card{
+    width: 300px; 
+    height: 450px; 
+}
+
+.card-content {
+    height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Jumlah baris teks yang ingin ditampilkan sebelum dipotong */
+    -webkit-box-orient: vertical;
+  }
+  
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+    position:static;
+  }
+
+  .link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    gap: 10px;
+  }
+
+  .buttons button{
+    background-color: rgb(179, 14, 36);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .buttons button:hover{
+    background-color: rgb(218, 19, 19);
+    opacity: 0.8;
+  
+  }

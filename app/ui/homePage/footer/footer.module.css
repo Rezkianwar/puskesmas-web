@@ -1,0 +1,18 @@
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--textSoft);
+    background-color: #044319;
+    padding: 20px;
+    
+  }
+  
+  .text {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  

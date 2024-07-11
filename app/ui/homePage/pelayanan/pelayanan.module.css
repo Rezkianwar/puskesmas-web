@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.cardContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.title{
+    padding: 20px;
+    text-align: center;
+    font-weight: 200;
+    color: var(--text);
+    background-color: #456049;
+    margin: 20px;
+    border-radius: 10px;
+}

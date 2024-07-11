@@ -1,0 +1,37 @@
+.container{
+    background-color: var(--bgsoft);
+    padding: 20px;
+    border-radius: 10px;
+    gap: 20px;
+    display: flex;
+    cursor: pointer;
+    width: 100%;
+}
+
+.container:hover{
+    background-color: #2e374a;
+  }
+
+.text{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.number{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.datail{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.possitive{
+    color: lime;
+}
+
+.negative{
+    color: red;
+}

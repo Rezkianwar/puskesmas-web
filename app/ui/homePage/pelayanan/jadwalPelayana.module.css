@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0px;
+}
+
+.img{
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.img:hover{
+    transform: scale(1.01);
+    box-shadow: 23px 32px 69px -18px rgba(0,0,0,0.57);
+-webkit-box-shadow: 23px 32px 69px -18px rgba(0,0,0,0.57);
+-moz-box-shadow: 23px 32px 69px -18px rgba(0,0,0,0.57);
+
+}

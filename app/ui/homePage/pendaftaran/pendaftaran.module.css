@@ -1,0 +1,39 @@
+.container{
+    padding: 20px;
+    gap: 20px;
+    background-color: #DBE7C9;
+}
+
+.title{
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 15px 0px;
+    background-color: #456049;
+    border-radius: 10px;
+    color: var(--text);
+}
+
+.signintitle p{
+    color: red;
+    text-align: center;
+    padding-top: 100px;
+    font-size: 18px;
+    font-family: monospace;
+    font-weight: bold;
+	animation: myAnim 2s ease 1s 5 normal forwards;
+}
+
+@keyframes myAnim {
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0.2;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}

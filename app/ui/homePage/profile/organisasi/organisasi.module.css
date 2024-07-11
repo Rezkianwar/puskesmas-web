@@ -1,0 +1,35 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+
+}
+
+.title{
+    padding: 10px;
+    background-color: #456049;
+    color: var(--text);
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.content{
+
+    padding: 30px;
+}
+
+.image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img{
+    border-radius: 10px;
+}
+

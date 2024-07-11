@@ -1,0 +1,39 @@
+.container{
+    display: flex;
+    gap: 20px;
+    padding: 50px 10px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--bgsoft);
+    border-radius: 20px;
+    width: 100%;
+    height: max-content;
+}
+
+.form h2{
+    font-family:monospace;
+    font-size: 24px;
+}
+
+ .form input{
+    padding: 20px;
+    background-color: var(--bg);
+    color: var(--text);
+    border-radius: 5px;
+    border: 2px solid #2e374a;
+    margin-bottom: 25px;
+}  
+
+.form button{
+    width: 100%;
+    padding: 30px;
+    background-color: teal;
+    color: var(--text);
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,141 @@
+.container{
+    background-color: #DBE7C9;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.titlepelayanan{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+    color: var(--text);
+ 
+}
+
+.titlejadwal{
+    background-color: #456049; 
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.titlependaftaran{
+    background-color: #456049; 
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.pelayanan{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+   
+}
+
+.jadwal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.contentjadwal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.contentjadwal ul, .contentjadwal li{
+    list-style: none;
+    font-weight: bold;
+}
+
+.jadwalList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .jadwalList li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    gap: 20px; /* Tambahkan padding untuk memberi ruang antar elemen */
+  }
+  
+  .left {
+    flex: 1;
+    text-align: left;
+ /* Memberi ruang di kanan agar tidak terlalu rapat */
+  }
+  
+  .right {
+    flex: 1;
+    text-align: left;
+  }
+
+  .pendaftaran{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+  }
+
+  .pendaftaran h1{
+    text-align: center;
+  }
+  .contentpendaftaran{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .cardpendaftaran{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    padding: 10px;
+  }
+
+  .pendaftaranlangsung ul, .pendaftaranlangsung li{
+    padding-top: 10px   ;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .pendaftaranOnline ul, .pendaftaranOnline li{
+ padding: 10px;
+ font-size: 14px;
+ font-weight: bold;
+ text-align:justify;
+  }
+
+  @media (max-width: 480px) {
+.jadwal h1{
+  text-align: center;
+}
+
+   .contentjadwal{
+    display: flex;
+    flex-direction: column;
+   }
+   .cardpendaftaran{
+    padding: 20px;
+    display: flex;
+    flex-direction: column
+   }
+  }

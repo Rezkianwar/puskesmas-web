@@ -1,0 +1,45 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+
+}
+
+.title{
+    padding: 10px;
+    background-color: #456049;
+    color: var(--text);
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.content{
+    border:solid #456049;
+    width: 500px;
+    padding: 30px;
+}
+
+.image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subtitle{
+    padding: 10px;
+}
+
+.subtitle p{
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    text-align: justify;
+    font-weight:bolder;
+    gap: 5px
+}
