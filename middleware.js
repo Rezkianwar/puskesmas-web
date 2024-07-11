@@ -28,7 +28,7 @@ export default async function middleware(req) {
 }
 
 export const config = {
-  matcher: ['/', '/factor-one', '/pendaftaran', '/dashboard', '/dashboardPegawai'],
+  matcher: ['/', '/factor-one', '/pendaftaran'],
 };
 
 
