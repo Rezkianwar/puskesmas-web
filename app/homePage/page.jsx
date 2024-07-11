@@ -22,7 +22,7 @@ const homePage = () => {
             <Image
               src="/pendaftaran-online.png"
               alt="pendaftaran online"
-              width={400}
+              width={300}
               height={200}
               preview={false}
               className={styles.image}
@@ -32,7 +32,7 @@ const homePage = () => {
             <Image
               src="/lapor.jpg"
               alt="lapor"
-              width={400}
+              width={300}
               height={200}
               preview={false}
               className={styles.image}

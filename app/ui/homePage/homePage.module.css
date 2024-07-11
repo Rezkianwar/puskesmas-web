@@ -29,10 +29,12 @@
 }
 
 .image:hover{
-    transform: scale(1.05);
+    transform: scale(1.02);
     box-shadow: 23px 32px 69px -18px rgba(0,0,0,0.57);
 }
 
 @media (max-width: 480px) {
-   
+    .linkimg{
+    
+    }
 }

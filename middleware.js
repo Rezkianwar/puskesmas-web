@@ -14,7 +14,7 @@ export default async function middleware(req) {
   }
 
 
-  if (pathname.startsWith('/dashboard')) {
+  if (pathname.startsWith('/dashboardPegawai')) {
     const response = await nextAuthMiddleware({
       callbacks: {
         authorized: ({ token }) => !!token,
@@ -44,7 +44,7 @@ export default async function middleware(req) {
 
 // Ensure to export config for the middleware
 export const config = {
-  matcher: ['/', '/factor-one','/pendaftaran', '/dashboard/:path*', '/dashboardPegawai/:path*'],
+  matcher: ['/', '/factor-one','/pendaftaran', '/dashboard/', '/dashboardPegawai/:path*'],
 };
 
 
