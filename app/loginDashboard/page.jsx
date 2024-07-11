@@ -10,7 +10,7 @@ const LoginDashboard = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [info, setInfo] = useState({ username: "", password: "" });
-  const [error] = useState("");
+  const [error, setError] = useState("");
   const [pending, setPending] = useState(false);
 
   const handleInput = (e) => {
@@ -26,29 +26,28 @@ const LoginDashboard = () => {
 
     try {
       setPending(true);
-      console.log("Signing in with:", info);
+      console.log("Signing in with:", info); // Debugging
       const res = await signIn("credentials", {
         username: info.username,
         password: info.password,
         redirect: false,
       });
-      console.log("Sign in response:", res);
+
+      console.log("Sign in response:", res); // Debugging
 
       if (res.error) {
-        message.error("Invalid username or password");
+        setError("Invalid username or password");
+        message.error(res.error);
       } else {
         const session = await fetch("/api/auth/session").then((res) =>
           res.json()
         );
-        console.log("Session:", session);
 
-        if (
-          session &&
-          session.user &&
-          typeof session.user.isAdmin !== "undefined"
-        ) {
+        console.log("Session:", session); // Debugging
+
+        if (session && session.user) {
           const isAdmin = session.user.isAdmin;
-          console.log("isAdmin:", isAdmin);
+          console.log("isAdmin:", isAdmin); // Debugging
 
           const redirectUrl =
             searchParams.get("redirect_url") ||
@@ -60,7 +59,7 @@ const LoginDashboard = () => {
         }
       }
     } catch (error) {
-      console.error("Error during signIn:", error);
+      console.error("Error during signIn:", error); // Debugging
       message.error("Something went wrong");
     } finally {
       setPending(false);
@@ -78,12 +77,12 @@ const LoginDashboard = () => {
           preview={false}
         />
         <div className={styles.top}>
-          <h1>LOG-IN </h1>
+          <h1>LOG-IN</h1>
         </div>
         {error && <p className={styles.error}>{error}</p>}
         <div className={styles.input}>
           <div className={styles.user}>
-            <label> Username </label>
+            <label>Username</label>
             <input
               type="text"
               placeholder="Username"
@@ -93,7 +92,7 @@ const LoginDashboard = () => {
             />
           </div>
           <div className={styles.password}>
-            <label> Password </label>
+            <label>Password</label>
             <input
               type="password"
               placeholder="Password"

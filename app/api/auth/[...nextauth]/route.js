@@ -23,7 +23,7 @@ async function login(credentials) {
 
 export const authOptions = {
   pages: {
-    signIn: "/loginDashboard/admin",
+    signIn: "/loginDashboard",
   },
   providers: [
     CredentialsProvider({
@@ -57,9 +57,15 @@ export const authOptions = {
       }
       return session;
     },
-    async redirect({  baseUrl }) {
-      // Redirect to dashboard after sign in
-      return baseUrl + '/dashboard';
+    async redirect({ url, baseUrl, token }) {  // Adding token to the redirect callback
+      console.log("Redirect callback called"); // Debugging
+      console.log("URL:", url); // Debugging
+      console.log("Base URL:", baseUrl); // Debugging
+      console.log("Token:", token); // Debugging
+
+      return url.startsWith(baseUrl) 
+        ? url 
+        : baseUrl + (token.isAdmin ? '/dashboard' : '/dashboardPegawai');
     },
   },
 };
