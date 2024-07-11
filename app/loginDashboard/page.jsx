@@ -26,14 +26,12 @@ const LoginDashboard = () => {
 
     try {
       setPending(true);
-      console.log("Signing in with:", info); // Debugging
+
       const res = await signIn("credentials", {
         username: info.username,
         password: info.password,
         redirect: false,
       });
-
-      console.log("Sign in response:", res); // Debugging
 
       if (res.error) {
         setError("Invalid username or password");
@@ -43,11 +41,8 @@ const LoginDashboard = () => {
           res.json()
         );
 
-        console.log("Session:", session); // Debugging
-
         if (session && session.user) {
           const isAdmin = session.user.isAdmin;
-          console.log("isAdmin:", isAdmin); // Debugging
 
           const redirectUrl =
             searchParams.get("redirect_url") ||
@@ -59,7 +54,6 @@ const LoginDashboard = () => {
         }
       }
     } catch (error) {
-      console.error("Error during signIn:", error); // Debugging
       message.error("Something went wrong");
     } finally {
       setPending(false);

@@ -1,3 +1,4 @@
+
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
@@ -23,7 +24,7 @@ async function login(credentials) {
 
 export const authOptions = {
   pages: {
-    signIn: "/loginDashboard",
+    signIn: "/loginDashboard/admin",
   },
   providers: [
     CredentialsProvider({
@@ -52,20 +53,10 @@ export const authOptions = {
     async session({ session, token }) {
       if (token) {
         session.user.id = token.id;
-        session.user.isAdmin = token.isAdmin;
+        session.user.isAdmin = token.isAdmin; 
         session.user.username = token.username;
       }
       return session;
-    },
-    async redirect({ url, baseUrl, token }) {  // Adding token to the redirect callback
-      console.log("Redirect callback called"); // Debugging
-      console.log("URL:", url); // Debugging
-      console.log("Base URL:", baseUrl); // Debugging
-      console.log("Token:", token); // Debugging
-
-      return url.startsWith(baseUrl) 
-        ? url 
-        : baseUrl + (token.isAdmin ? '/dashboard' : '/dashboardPegawai');
     },
   },
 };
@@ -73,3 +64,4 @@ export const authOptions = {
 const handler = (req, res) => NextAuth(req, res, authOptions);
 
 export { handler as GET, handler as POST };
+
