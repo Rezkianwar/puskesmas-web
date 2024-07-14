@@ -2,7 +2,7 @@ import { fetchManagePasien } from "@/app/lib/service/managePasienService";
 import styles from "../../ui/homePage/pendaftaran/pendaftaran.module.css";
 import TablePendaftaran from "./tablePendaftaran/page";
 import { currentUser } from "@clerk/nextjs/server";
-import { SignUp } from "@clerk/nextjs";
+import { SignIn } from "@clerk/nextjs";
 
 export default async function pendaftaranOnline() {
   const user = await currentUser();
@@ -19,7 +19,7 @@ export default async function pendaftaranOnline() {
             <br /> Untuk Melakukan Pendaftaran.
           </p>
         </div>
-        <SignUp
+        <SignIn
           appearance={{
             elements: {
               rootBox: {
