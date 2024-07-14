@@ -15,7 +15,7 @@ const handleDelete = async (id) => {
       message.success(result.message);
       setTimeout(() => {
         window.location.reload();
-      }, 1000);
+      }, 800);
     } else {
       message.error(result.message);
     }
@@ -57,7 +57,7 @@ const TableUsers = ({ users }) => {
               <td>{user.email}</td>
               <td>{user.phone}</td>
               <td>{user.address}</td>
-              <td>{user.createdAt?.toString().slice(2, 10)}</td>
+              <td>{user.createdAt?.toString().slice(0, 10)}</td>
               <td>{user.isAdmin ? "Admin" : "Pegawai"}</td>
               <td>{user.isActive ? "Active" : "Passive"}</td>
               <td>

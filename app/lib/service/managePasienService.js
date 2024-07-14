@@ -14,9 +14,9 @@ export const fetchManagePasien = async (query, page) => {
       .skip(ITEM_PER_PAGE * (page - 1))
       .lean();
 
-      managepasiens.forEach(user => {
-        user._id = user._id.toString();
-        user.createdAt = user.createdAt.toISOString();
+      managepasiens.forEach(managepasien => {
+        managepasien._id = managepasien._id.toString();
+        managepasien.createdAt = managepasien.createdAt.toISOString();
       });
 
     return { count, managepasiens };
@@ -43,7 +43,7 @@ export const fetchManagePasiens = async (id) => {
 
     return simpleUser;
   } catch (error) {
-    console.error("Error fetching pasien:", error);
+    console.error("Error fetching manage pasien:", error);
     throw new Error("failed to fetch manage pasiens from db");
   }
 };

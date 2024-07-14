@@ -6,7 +6,7 @@ import { Queue } from "../models/queue";
 import { revalidatePath } from "next/cache";
 
 export const addManagePasien = async (formData) => {
-    const { name, phone , address, jenis_Kelamin , nomorbpjs, nik, pembayaran, statusPembayaran, desc, checkOut } = formData;
+    const { name, phone , address, jenis_Kelamin , nomorbpjs, nik, pembayaran, desc, checkOut } = formData;
   
   
     try {
@@ -27,7 +27,6 @@ export const addManagePasien = async (formData) => {
         nomorbpjs, 
         nik, 
         pembayaran,
-        statusPembayaran,
         desc,
         checkOut,
         queueNumber: queue.currentNumber.toString(),
@@ -54,7 +53,7 @@ export const addManagePasien = async (formData) => {
     const data = typeof formData.entries === 'function' ? Object.fromEntries(formData.entries()) : formData;
   
 
-    const { id, name, address, nomorbpjs, nik, checkOut, desc, pembayaran, statusPembayaran, jenis_Kelamin } = data;
+    const { id, name, address, nomorbpjs, nik, checkOut, desc, pembayaran, jenis_Kelamin } = data;
   
     try {
       await connectToDB();
@@ -65,7 +64,6 @@ export const addManagePasien = async (formData) => {
         nik, 
         checkOut,
         pembayaran,
-        statusPembayaran,
         desc,
         jenis_Kelamin
       };

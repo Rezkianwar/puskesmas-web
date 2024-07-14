@@ -19,7 +19,6 @@ const AddManageProduct = () => {
       phone: formData.get("phone"),
       jenis_Kelamin: formData.get("jenis_Kelamin"),
       pembayaran: formData.get("pembayaran"),
-      statusPembayaran: formData.get("statusPembayaran"),
       nik: formData.get("nik"),
       checkOut: formData.get("checkOut"),
       desc: formData.get("desc"),
@@ -30,7 +29,7 @@ const AddManageProduct = () => {
       if (result.success) {
         message.success(result.message || "Data berhasil ditambahkan!");
         event.target.reset(); // Reset form setelah sukses
-        setTimeout(() => router.push("/dashboardPegawai/managePasien"), 2000); // Redirect setelah 2 detik
+        setTimeout(() => router.push("/dashboardPegawai/managePasien"), 1000); // Redirect setelah 2 detik
       } else {
         message.error(
           result.message || "Gagal menambahkan data. Silakan coba lagi."
@@ -69,10 +68,6 @@ const AddManageProduct = () => {
           <option value="Wanita">Wanita</option>
         </select>
         <select name="statusPembayaran" id="statusPembayaran">
-          <option value="" disabled>
-            -- Pilih Status Pembayaran --
-          </option>
-          <option value="sudahdibayar">Sudah Dibayar</option>
           <option value="belumdibayar">Belum Dibayar</option>
         </select>
         <input type="datetime-local" id="checkOut" name="checkOut" required />

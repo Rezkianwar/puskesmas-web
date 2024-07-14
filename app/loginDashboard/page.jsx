@@ -20,7 +20,7 @@ const LoginDashboard = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!info.username || !info.password) {
-      message.error("Please fill in all fields");
+      message.error("Silahkan untuk mengisikan username dan password");
       return;
     }
 

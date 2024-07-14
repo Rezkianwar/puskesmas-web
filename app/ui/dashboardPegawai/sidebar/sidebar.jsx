@@ -9,6 +9,7 @@ import {
   MdLogout,
   MdLocalHospital,
   MdMedicalInformation,
+  MdCurrencyExchange,
 } from "react-icons/md";
 import { signOut, useSession } from "next-auth/react";
 import { Layout, Menu } from "antd";
@@ -40,6 +41,11 @@ const createMenuItems = () => [
             key: "/dashboardPegawai/managePasien/rujukanPasien",
             label: "Rujukan Pasien",
             icon: <MdMedicalServices />,
+          },
+          {
+            key: "/dashboardPegawai/managePasien/pembayaran",
+            label: "Pembayaran",
+            icon: <MdCurrencyExchange />,
           },
         ],
       },

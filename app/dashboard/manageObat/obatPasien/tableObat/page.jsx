@@ -17,7 +17,7 @@ const handleDelete = async (id) => {
       message.success(result.message);
       setTimeout(() => {
         window.location.reload();
-      }, 2000);
+      }, 800);
     } else {
       message.error(result.message);
     }
@@ -35,7 +35,7 @@ const TableObatPasien = ({ obatpasiens }) => {
       if (result.success) {
         message.success(result.message || "Status berhasil diperbarui!");
 
-        setTimeout(() => router.refresh(), 2000);
+        setTimeout(() => router.refresh(), 800);
       } else {
         message.error(
           result.message || "Gagal memperbarui status. Silakan coba lagi."

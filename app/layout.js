@@ -8,13 +8,13 @@ import {
 import { AntdRegistry } from '@ant-design/nextjs-registry';
 import { Flex, Spin } from 'antd';
 import SessionProviderWrapper from './SessionProviderWrapper';
-import Head from 'next/head';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Puskesmas Silago',
   description: 'Puskesmas App',
+  img : '/favicon.ico',
 }
 
 export default function RootLayout({ children }) {
@@ -22,11 +22,6 @@ export default function RootLayout({ children }) {
     <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
       <html lang="en">
         <body className={inter.className} style={{ backgroundColor: 'var(--bgHome)' }}>
-        <Head>
-          <title>{metadata.title}</title>
-          <meta name="description" content={metadata.description} />
-          <link rel="icon" href="/favicon.ico" /> {/* Menambahkan link ke favicon */}
-        </Head>
           <SessionProviderWrapper>
             <ClerkLoading>
               <div className='loading'>

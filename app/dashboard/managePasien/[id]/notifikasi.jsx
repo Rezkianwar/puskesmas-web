@@ -18,7 +18,6 @@ const UpdateManagePasienForm = ({ managepasien, onUpdate }) => {
       ? new Date(managepasien.checkOut).toISOString().slice(0, 16)
       : "",
     pembayaran: managepasien.pembayaran,
-    statusPembayaran: managepasien.statusPembayaran,
     desc: managepasien.desc,
     jenis_Kelamin: managepasien.jenis_Kelamin,
   });
@@ -119,18 +118,6 @@ const UpdateManagePasienForm = ({ managepasien, onUpdate }) => {
             </option>
             <option value="cash/tunai">Cash/Tunai</option>
             <option value="bpjs">BPJS</option>
-          </select>
-          <label>Status Pembayaran</label>
-          <select
-            name="statusPembayaran"
-            value={formData.statusPembayaran}
-            onChange={handleChange}
-          >
-            <option value="" disabled>
-              Pilih Status Pembayaran
-            </option>
-            <option value="sudahdibayar">Sudah Dibayar</option>
-            <option value="belumdibayar">Belum Dibayar</option>
           </select>
           <label>Description</label>
           <textarea

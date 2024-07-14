@@ -35,7 +35,6 @@ const TableManagePasien = ({ managepasiens }) => {
           <td>Jenis Kelamin</td>
           <td>Address</td>
           <td>Pembayaran</td>
-          <td>Status Pembayaran</td>
           <td>Created At</td>
           <td>Check Out</td>
           <td>Actions</td>
@@ -63,7 +62,6 @@ const TableManagePasien = ({ managepasiens }) => {
               <td>{managepasien.jenis_Kelamin}</td>
               <td>{managepasien.address}</td>
               <td>{managepasien.pembayaran}</td>
-              <td>{managepasien.statusPembayaran}</td>
               <td>{managepasien.createdAt?.toString().slice(4, 16)}</td>
               <td>{managepasien.checkOut?.toString().slice(4, 16)}</td>
               <td>

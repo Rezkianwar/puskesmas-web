@@ -31,9 +31,6 @@ const managePasienSchema = new mongoose.Schema({
     pembayaran: {
         type: String,
     },
-    statusPembayaran: {
-        type: String,
-    },
     checkOut: {
         type: Date,
     },

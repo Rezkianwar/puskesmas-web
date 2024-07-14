@@ -10,15 +10,15 @@ async function login(credentials) {
     await connectToDB();
     const user = await Users.findOne({ username: credentials.username, isActive: true });
     if (!user) {
-      throw new Error("User not found");
+      throw new Error("user tidak ditemukan");
     }
     const isCorrect = await bcrypt.compare(credentials.password, user.password);
     if (!isCorrect) {
-      throw new Error("Incorrect password");
+      throw new Error("password anda salah");
     }
     return user;
   } catch (error) {
-    throw new Error(error.message || "Something went wrong");
+    throw new Error(error.message || "Terdapat kesalahan dalam proses login");
   }
 }
 

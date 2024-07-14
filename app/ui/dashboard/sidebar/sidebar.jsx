@@ -11,6 +11,7 @@ import {
   MdLocalHospital,
   MdMedicalInformation,
   MdAddCard,
+  MdCurrencyExchange,
 } from "react-icons/md";
 import { signOut, useSession } from "next-auth/react";
 import { Layout, Menu } from "antd";
@@ -47,6 +48,11 @@ const createMenuItems = () => [
             key: "/dashboard/managePasien/rujukanPasien",
             label: "Rujukan Pasien",
             icon: <MdMedicalServices />,
+          },
+          {
+            key: "/dashboard/managePasien/pembayaran",
+            label: "Pembayaran",
+            icon: <MdCurrencyExchange />,
           },
         ],
       },
