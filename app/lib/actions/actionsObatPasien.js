@@ -57,7 +57,7 @@ export const addObatPasien = async (formData) => {
       await obatpasien.save();
   
       const message = status === 'surat bisa diambil'
-        ? 'Obat Anda sudah bisa diambil di puskesmas.'
+        ? 'Puskesmas Silago : Obat Anda sudah bisa diambil di puskesmas.'
         : `Status permintaan Obat Anda telah diubah menjadi: ${status}`;
   
       // Kirim notifikasi ke WhatsApp

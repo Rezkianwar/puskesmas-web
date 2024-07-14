@@ -52,7 +52,7 @@ export const updateRujukanPasien = async (id, status) => {
     await rujukanpasien.save();
 
     const message = status === 'surat bisa diambil'
-      ? 'Surat rujukan Anda sudah bisa diambil di puskesmas.'
+      ? 'Puskesmas Silago : Surat rujukan Anda sudah bisa diambil di puskesmas.'
       : `Status permintaan surat rujukan Anda telah diubah menjadi: ${status}`;
 
     // Kirim notifikasi ke WhatsApp
