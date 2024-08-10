@@ -17,7 +17,7 @@ const handleDelete = async (id) => {
       message.success(result.message);
       setTimeout(() => {
         window.location.reload();
-      }, 2000);
+      }, 800);
     } else {
       message.error(result.message);
     }
