@@ -1,4 +1,4 @@
-import { Inter } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 import './ui/globals.css'
 import {
   ClerkLoaded,
@@ -9,7 +9,10 @@ import { AntdRegistry } from '@ant-design/nextjs-registry';
 import { Flex, Spin } from 'antd';
 import SessionProviderWrapper from './SessionProviderWrapper';
 
-const inter = Inter({ subsets: ['latin'] })
+const roboto = Roboto({
+  weight: ['400', '700'], 
+  subsets: ['latin'],
+display: 'swap',})
 
 export const metadata = {
   title: 'Puskesmas Silago',
@@ -21,7 +24,7 @@ export default function RootLayout({ children }) {
   return (
     <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
       <html lang="en">
-        <body className={inter.className} style={{ backgroundColor: 'var(--bgHome)' }}>
+        <body className={roboto.className} style={{ backgroundColor: 'var(--bgHome)' }}>
           <SessionProviderWrapper>
             <ClerkLoading>
               <div className='loading'>
