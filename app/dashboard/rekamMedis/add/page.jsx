@@ -16,6 +16,7 @@ const AddRekamMedis = () => {
     const data = {
       nama: formData.get("nama"),
       tanggal: formData.get("tanggal"),
+      tanggalLahir: formData.get("tanggalLahir"),
       keluhan: formData.get("keluhan"),
       diagnosa: formData.get("diagnosa"),
       tindakan: formData.get("tindakan"),
@@ -45,6 +46,12 @@ const AddRekamMedis = () => {
       <form onSubmit={handleSubmit} className={styles.form}>
         <input type="text" placeholder="Nama Lengkap" name="nama" required />
         <input type="datetime-local" id="tanggal" name="tanggal" required />
+        <input
+          type="datetime-local"
+          id="tanggalLahir"
+          name="tanggalLahir"
+          required
+        />
         <input
           type="keluhan"
           placeholder="Alamat. cth: Jorong Silago"

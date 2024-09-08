@@ -11,6 +11,10 @@ const rekamMedisSchema = new mongoose.Schema({
         type: Date,
         required: true,
     },
+    tanggalLahir: {
+        type: Date,
+        required: true,
+    },
     keluhan: {
         type: String,
         required: true,

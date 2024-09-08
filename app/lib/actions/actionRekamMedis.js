@@ -6,7 +6,7 @@ import { revalidatePath } from "next/cache";
 
 
 export const addRekamMedis = async (data) => {
-    const { nama, tanggal, keluhan, diagnosa, tindakan, resepObat, dokter, catatanTambahan } = data;
+    const { nama, tanggal,tanggalLahir, keluhan, diagnosa, tindakan, resepObat, dokter, catatanTambahan } = data;
   
     try {
       await connectToDB();
@@ -14,6 +14,7 @@ export const addRekamMedis = async (data) => {
       const newRekamMedis = new RekamsMedis({
         nama,
         tanggal,
+        tanggalLahir,
         keluhan,
         diagnosa,
         tindakan,
@@ -41,13 +42,14 @@ export const addRekamMedis = async (data) => {
   export const UpdateRekamMedis = async (formData) => {
     const data = typeof formData.entries === 'function' ? Object.fromEntries(formData.entries()) : formData;
   
-    const { id, nama, tanggal, keluhan, diagnosa, tindakan, resepObat, dokter, catatanTambahan } = data;
+    const { id, nama, tanggal,tanggalLahir, keluhan, diagnosa, tindakan, resepObat, dokter, catatanTambahan } = data;
   
     try {
       await connectToDB();
       const updateFields = {
         nama,
         tanggal,
+        tanggalLahir,
         keluhan,
         diagnosa,
         tindakan,

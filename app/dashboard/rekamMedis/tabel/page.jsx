@@ -30,6 +30,7 @@ const TableRekamMedis = ({ rekammediss }) => {
         <tr>
           <td>Nama</td>
           <td>Tanggal</td>
+          <td>Tanggal Lahir</td>
           <td>Keluhan</td>
           <td>Diagnosa</td>
           <td>Tindakan</td>
@@ -47,6 +48,7 @@ const TableRekamMedis = ({ rekammediss }) => {
                 <div className={styles.rekammedis}>{rekammedis.nama}</div>
               </td>
               <td>{rekammedis.tanggal?.toString().slice(4, 16)}</td>
+              <td>{rekammedis.tanggalLahir?.toString().slice(4, 16)}</td>
               <td>{rekammedis.keluhan}</td>
               <td>{rekammedis.diagnosa}</td>
               <td>{rekammedis.tindakan}</td>
