@@ -4,7 +4,7 @@ import { addManagePasien } from "../../../lib/actions/actionManagePasien";
 import { useRouter } from "next/navigation";
 import styles from "../../../ui/dashboard/managePasien/addManagePasien/addManagePasien.module.css";
 
-const AddManageProduct = () => {
+const AddManagePasien = () => {
   const router = useRouter();
 
   const handleSubmit = async (event) => {
@@ -81,4 +81,4 @@ const AddManageProduct = () => {
   );
 };
 
-export default AddManageProduct;
+export default AddManagePasien;
